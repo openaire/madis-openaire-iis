@@ -16,7 +16,7 @@ if sys.platform == 'darwin':
 
 import re
 import apsw
-import functions
+import madis.functions as functions
 import traceback
 import json
 import math

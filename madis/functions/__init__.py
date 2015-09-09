@@ -309,15 +309,20 @@ def register(connection=None):
 
     # Register aggregate functions
     for module in aggrfiles:
-        moddict = aggregate.__dict__[module]
+        moddict = sys.modules['functions.aggregate'+'.'+module]
+        #moddict = aggregate.__dict__[module]
+
         register_ops(moddict,connection)
 
     # Register row functions
     for module in rowfiles:
-        moddict = row.__dict__[module]
+        moddict = sys.modules['functions.row'+'.'+module]
+        #moddict = row.__dict__[module]
+
         register_ops(moddict,connection)
 
-    register_ops(vtable,connection)
+    register_ops(sys.modules['functions.vtable'],connection)
+    #register_ops(vtable,connection)
 
     ## Register madis local functions (functionslocal)
     functionslocalpath=os.path.abspath(os.path.join(functionspath,'..','functionslocal'))

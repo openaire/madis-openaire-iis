@@ -268,4 +268,3 @@ if not ('.' in __name__):
         sys.setdefaultencoding('utf-8')
         import doctest
         doctest.testmod()
-        

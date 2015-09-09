@@ -3,10 +3,12 @@
 from optparse import OptionParser
 import sys
 import apsw
-import madis
 import json
+import madis
+import traceback
 
 def exitwitherror(txt):
+    print(traceback.format_exc())
     sys.stderr.write(txt+'\n')
     sys.exit(1)
 
