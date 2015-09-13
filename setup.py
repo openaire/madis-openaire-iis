@@ -20,12 +20,13 @@ setup(
     test_suite='nose.collector',
     keywords=['database', 'processing'],
     classifiers=[
-        'Development Status :: 5 - Production/Stable    ',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
-        'Intended Audience :: Developers',
+        'Intended Audience :: Science/Research',
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.7',
         'Topic :: Scientific/Engineering :: Information Analysis',
+        'Topic :: Database :: Front-Ends',
     ],
     scripts=['scripts/madis_mexec.py', 'scripts/madis_mterm.py']
 )
